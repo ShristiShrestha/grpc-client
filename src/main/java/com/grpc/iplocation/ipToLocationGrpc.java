@@ -1,4 +1,4 @@
-package com.client.ipLocation;
+package com.grpc.iplocation;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
@@ -27,30 +27,30 @@ public final class ipToLocationGrpc {
   public static final String SERVICE_NAME = "ipToLocation";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.client.ipLocation.IpToLocation.IpLocationRequest,
-      com.client.ipLocation.IpToLocation.IpLocationResponse> getGetMyLocationFromIpMethod;
+  private static volatile io.grpc.MethodDescriptor<com.grpc.iplocation.IpToLocation.IpLocationRequest,
+      com.grpc.iplocation.IpToLocation.IpLocationResponse> getGetMyLocationFromIpMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getMyLocationFromIp",
-      requestType = com.client.ipLocation.IpToLocation.IpLocationRequest.class,
-      responseType = com.client.ipLocation.IpToLocation.IpLocationResponse.class,
+      requestType = com.grpc.iplocation.IpToLocation.IpLocationRequest.class,
+      responseType = com.grpc.iplocation.IpToLocation.IpLocationResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.client.ipLocation.IpToLocation.IpLocationRequest,
-      com.client.ipLocation.IpToLocation.IpLocationResponse> getGetMyLocationFromIpMethod() {
-    io.grpc.MethodDescriptor<com.client.ipLocation.IpToLocation.IpLocationRequest, com.client.ipLocation.IpToLocation.IpLocationResponse> getGetMyLocationFromIpMethod;
+  public static io.grpc.MethodDescriptor<com.grpc.iplocation.IpToLocation.IpLocationRequest,
+      com.grpc.iplocation.IpToLocation.IpLocationResponse> getGetMyLocationFromIpMethod() {
+    io.grpc.MethodDescriptor<com.grpc.iplocation.IpToLocation.IpLocationRequest, com.grpc.iplocation.IpToLocation.IpLocationResponse> getGetMyLocationFromIpMethod;
     if ((getGetMyLocationFromIpMethod = ipToLocationGrpc.getGetMyLocationFromIpMethod) == null) {
       synchronized (ipToLocationGrpc.class) {
         if ((getGetMyLocationFromIpMethod = ipToLocationGrpc.getGetMyLocationFromIpMethod) == null) {
           ipToLocationGrpc.getGetMyLocationFromIpMethod = getGetMyLocationFromIpMethod = 
-              io.grpc.MethodDescriptor.<com.client.ipLocation.IpToLocation.IpLocationRequest, com.client.ipLocation.IpToLocation.IpLocationResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.grpc.iplocation.IpToLocation.IpLocationRequest, com.grpc.iplocation.IpToLocation.IpLocationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "ipToLocation", "getMyLocationFromIp"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.client.ipLocation.IpToLocation.IpLocationRequest.getDefaultInstance()))
+                  com.grpc.iplocation.IpToLocation.IpLocationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.client.ipLocation.IpToLocation.IpLocationResponse.getDefaultInstance()))
+                  com.grpc.iplocation.IpToLocation.IpLocationResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new ipToLocationMethodDescriptorSupplier("getMyLocationFromIp"))
                   .build();
           }
@@ -88,8 +88,8 @@ public final class ipToLocationGrpc {
 
     /**
      */
-    public void getMyLocationFromIp(com.client.ipLocation.IpToLocation.IpLocationRequest request,
-        io.grpc.stub.StreamObserver<com.client.ipLocation.IpToLocation.IpLocationResponse> responseObserver) {
+    public void getMyLocationFromIp(com.grpc.iplocation.IpToLocation.IpLocationRequest request,
+        io.grpc.stub.StreamObserver<com.grpc.iplocation.IpToLocation.IpLocationResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetMyLocationFromIpMethod(), responseObserver);
     }
 
@@ -99,8 +99,8 @@ public final class ipToLocationGrpc {
             getGetMyLocationFromIpMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.client.ipLocation.IpToLocation.IpLocationRequest,
-                com.client.ipLocation.IpToLocation.IpLocationResponse>(
+                com.grpc.iplocation.IpToLocation.IpLocationRequest,
+                com.grpc.iplocation.IpToLocation.IpLocationResponse>(
                   this, METHODID_GET_MY_LOCATION_FROM_IP)))
           .build();
     }
@@ -126,8 +126,8 @@ public final class ipToLocationGrpc {
 
     /**
      */
-    public void getMyLocationFromIp(com.client.ipLocation.IpToLocation.IpLocationRequest request,
-        io.grpc.stub.StreamObserver<com.client.ipLocation.IpToLocation.IpLocationResponse> responseObserver) {
+    public void getMyLocationFromIp(com.grpc.iplocation.IpToLocation.IpLocationRequest request,
+        io.grpc.stub.StreamObserver<com.grpc.iplocation.IpToLocation.IpLocationResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetMyLocationFromIpMethod(), getCallOptions()), request, responseObserver);
     }
@@ -152,9 +152,8 @@ public final class ipToLocationGrpc {
     }
 
     /**
-     * @param request
      */
-    public com.client.ipLocation.IpToLocation.IpLocationResponse getMyLocationFromIp(IpToLocation.IpLocationRequest request) {
+    public com.grpc.iplocation.IpToLocation.IpLocationResponse getMyLocationFromIp(com.grpc.iplocation.IpToLocation.IpLocationRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetMyLocationFromIpMethod(), getCallOptions(), request);
     }
@@ -180,8 +179,8 @@ public final class ipToLocationGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.client.ipLocation.IpToLocation.IpLocationResponse> getMyLocationFromIp(
-        com.client.ipLocation.IpToLocation.IpLocationRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.grpc.iplocation.IpToLocation.IpLocationResponse> getMyLocationFromIp(
+        com.grpc.iplocation.IpToLocation.IpLocationRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetMyLocationFromIpMethod(), getCallOptions()), request);
     }
@@ -207,8 +206,8 @@ public final class ipToLocationGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_MY_LOCATION_FROM_IP:
-          serviceImpl.getMyLocationFromIp((com.client.ipLocation.IpToLocation.IpLocationRequest) request,
-              (io.grpc.stub.StreamObserver<com.client.ipLocation.IpToLocation.IpLocationResponse>) responseObserver);
+          serviceImpl.getMyLocationFromIp((com.grpc.iplocation.IpToLocation.IpLocationRequest) request,
+              (io.grpc.stub.StreamObserver<com.grpc.iplocation.IpToLocation.IpLocationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -232,7 +231,7 @@ public final class ipToLocationGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.client.ipLocation.IpToLocation.getDescriptor();
+      return com.grpc.iplocation.IpToLocation.getDescriptor();
     }
 
     @java.lang.Override

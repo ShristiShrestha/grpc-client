@@ -1,6 +1,6 @@
 syntax ="proto3";
 
-option java_package = "com.client.ipLocation";
+option java_package = "com.grpc.iplocation";
 
 service ipToLocation{
     rpc getMyLocationFromIp(IpLocationRequest) returns (IpLocationResponse);
